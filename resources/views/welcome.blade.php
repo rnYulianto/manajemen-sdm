@@ -9,63 +9,52 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
+            body{
+                background-image: url("{{asset('img/company.png')}}");
+                background-size: cover;
             }
-
-            .full-height {
+            .page{
                 height: 100vh;
             }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
+            .login-side{
+                background-color: rgba(255, 255, 255, 0.8);
             }
-
-            .position-ref {
-                position: relative;
+            .login-form{
+                background-color: white;
+                padding: 20px;
+                border-radius: 5px;
             }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
+            h1, h2, h3{
                 text-align: center;
             }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
         </style>
+
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="container-fluid">
+            <div class="row page">
+                <div class="welcome col-sm align-self-center">
+                    <h1>Selamat Datang</h1>
+                    <h2>Sistem Manajemen Pegawai</h2>
+                </div>
+                <div class="login-side col-md-5 align-self-stretch d-flex flex-column justify-content-center">
+                    <div class="login-form align-self-stretch">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -91,6 +80,6 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </body>
 </html>
